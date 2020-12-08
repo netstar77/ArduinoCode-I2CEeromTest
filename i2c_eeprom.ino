@@ -41,7 +41,7 @@ void writeI2CByte(word reg_addr, byte data)
   Wire.write((byte)(reg_addr & 0x00FF));
   Wire.write(data);
   Wire.endTransmission();
-  delay(5);                         // after I2C write eeprom require 5ms delay to finish phisical write
+  delay(5);                         // after I2C write eeprom require 5ms delay to finish physical write
 }
 
 byte readI2CByte(word reg_addr)

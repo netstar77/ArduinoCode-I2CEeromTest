@@ -1,7 +1,7 @@
 /********************
  * 8K I2C memory test
  * writhing all of the cells of memory with a number
- * than rad them and display via serial
+ * than read them and display via serial
  */
 #include <Wire.h>
 
@@ -23,7 +23,7 @@ void setup() {
 
   for( int i = 0; i < 1024; i++){   // This loop reads memory cells and displays value via serial
     if( !(i%16) )
-      Serial.print("\n\r");
+      Serial.print("\n\r");         // print new line and carriage return every 16 elements
     Serial.print("0x");
     Serial.print(readI2CByte(i), HEX);
     Serial.print(", ");
